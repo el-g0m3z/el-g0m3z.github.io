@@ -18,3 +18,11 @@
   .zoom:hover {
     transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
+  hr.thick {
+    border: 10px solid grey;
+    border-radius: 5px;
+  }
+  hr.thick2 {
+    border: 5px solid grey;
+    border-radius: 5px;
+  }
