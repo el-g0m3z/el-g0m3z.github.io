@@ -1,28 +1,53 @@
+body {
+  background-color: rgb(168, 117, 203);
+  font-weight: bold;
+  /* unvisited link */
+  a:link {
+    color: rgb(33, 242, 33);
+  }
+
+  /* visited link */
+  a:visited {
+    color: rgb(166, 28, 179);
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+}
 
 .responsive {
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
+}
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  .zoom {
-    padding: 10px;
-    transition: transform .2s; /* Animation */
-    margin: 0 auto;
-  }
-  
-  .zoom:hover {
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-  hr.thick {
-    border: 10px solid grey;
-    border-radius: 5px;
-  }
-  hr.thick2 {
-    border: 5px solid grey;
-    border-radius: 5px;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.zoom {
+  padding: 10px;
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(
+    1.5
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+hr.thick {
+  border: 10px solid grey;
+  border-radius: 5px;
+}
+hr.thick2 {
+  border: 5px solid grey;
+  border-radius: 5px;
+}
