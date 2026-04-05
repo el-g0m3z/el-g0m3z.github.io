@@ -5,9 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>el g0m3z</title>
+  <meta name="description" content="Art, music, philosophy, and life stuff by el g0m3z.">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" href="resources/g0m3z/g0m3z-skull.png">
+  <style>
+    .counter-box {
+      text-align: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .counter-number {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,9 +36,9 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a class="nav-link" href="index.html">Home is where you make it</a></li>
-        <li class="nav-item"><a class="nav-link" href="painting.html">Paintings</a></li>
+        <li class="nav-item"><a class="nav-link" href="paintings/painting.html">Paintings</a></li>
         <li class="nav-item"><a class="nav-link" href="music.html">Music</a></li>
-        <li class="nav-item"><a class="nav-link" href="philosophy.html">Philosophy</a></li>
+        <li class="nav-item"><a class="nav-link" href="philosophy/philosophy.html">Philosophy</a></li>
         <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
         <li class="nav-item"><a class="nav-link" href="revolucion.html">Revolucion</a></li>
         <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
@@ -35,7 +48,21 @@
   </nav>
 
   <hr style="width: 100%; border-top: 5px solid #00ab44;">
+ <div class="counter-box">
+    <p>Page views:</p>
+    <span class="counter-number" id="count">0</span>
+  </div>
 
+  <script>
+    let count = localStorage.getItem('page_view');
+    if (count) {
+      count = Number(count) + 1;
+    } else {
+      count = 1;
+    }
+    localStorage.setItem('page_view', count);
+    document.getElementById('count').innerText = count;
+  </script>
   <main class="container my-5">
 
     <!-- Hero -->
@@ -83,7 +110,7 @@
     <!-- Section: Painting & Life Stuff -->
     <div class="row text-center mb-4">
       <div class="col-md-6">
-        <h1><a href='painting.html'>Paintings</a></h1>
+        <h1><a href='paintings/painting.html'>Paintings</a></h1>
       </div>
       <div class="col-md-6">
         <h3>Life stuff</h3>
@@ -94,11 +121,11 @@
     <div class="row">
       <div class="col-md-6 text-center">
         <div class="zoom">
-          <a href='painting.html'><img src="resources/g0m3z/g0m3z-1.png" class="img-fluid" alt="Artwork"></a>
+          <a href='paintings/painting.html'><img src="resources/g0m3z/g0m3z-1.png" class="img-fluid" alt="Artwork"></a>
         </div>
       </div>
       <div class="col-md-6">
-        <h1><a href='philosophy.html'>Philosophy</a></h1>
+        <h1><a href='philosophy/philosophy.html'>Philosophy</a></h1>
         <p>Here are some philosophical ideas I find interesting and my thoughts on them.</p>
 
         <h1><a href='books.html'>Books</a></h1>
