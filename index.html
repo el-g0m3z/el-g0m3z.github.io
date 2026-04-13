@@ -1,96 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>el g0m3z</title>
-  <meta name="description" content="Art, music, philosophy, and life stuff by el g0m3z.">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <title>el g0m3z — art, music &amp; philosophy</title>
+  <meta name="description" content="Art, music, philosophy, and life stuff by Thomas Gómez (el g0m3z).">
+  <!-- Bootstrap 5 — no jQuery needed -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" href="resources/g0m3z/lilbrofavicon16x16.png">
-  <style>
-    .counter-box {
-      text-align: center;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-    }
-    .counter-number {
-      font-size: 48px;
-      font-weight: bold;
-      color: #333;
-    }
-  </style>
+  <script src="https://cdn.counter.dev/script.js" data-id="02ae22ac-3c0e-4b64-ad90-4f28353528c3" data-utcoffset="-5"></script>
 </head>
-
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="g0m3z.com">el g0m3z</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
-      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- Shared navbar (injected by nav.js) -->
+  <div id="site-nav"></div>
 
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a class="nav-link" href="index.html">Home is where you make it</a></li>
-        <li class="nav-item"><a class="nav-link" href="paintings/painting.html">Paintings</a></li>
-        <li class="nav-item"><a class="nav-link" href="music.html">Music</a></li>
-        <li class="nav-item"><a class="nav-link" href="philosophy/philosophy.html">Philosophy</a></li>
-        <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
-        <li class="nav-item"><a class="nav-link" href="revolucion.html">Revolucion</a></li>
-        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <hr style="width: 100%; border-top: 5px solid #00ab44;">
- <div class="counter-box">
-    <p>Page views:</p>
-    <span class="counter-number" id="count">0</span>
+  <!-- Page view counter using counter.dev (counts real visitors, not localStorage) -->
+  <!-- Replace YOUR_USERNAME below with your counter.dev username after signing up at https://counter.dev -->
+  <div class="text-center py-3" style="font-family: Arial, sans-serif;">
+    <p style="margin-bottom: 4px;">Page views:</p>
+    <img src="https://counter.dev/elg0m3z/counter.svg" alt="Page view counter" height="32">
+    <!--
+      Alternative: remove the <img> above and use this one-liner instead (no sign-up):
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fel-g0m3z.github.io&title=hits" alt="Visitor count">
+    -->
   </div>
 
-  <script>
-    let count = localStorage.getItem('page_view');
-    if (count) {
-      count = Number(count) + 1;
-    } else {
-      count = 1;
-    }
-    localStorage.setItem('page_view', count);
-    document.getElementById('count').innerText = count;
-  </script>
   <main class="container my-5">
 
     <!-- Hero -->
     <div class="text-center mb-5">
-      <h2><a href="secret1.html">el g0m3z</a></h2>
+      <h1><a href="secret1.html">el g0m3z</a></h1>
     </div>
 
     <div class="row">
       <div class="col-md-6 text-center">
         <div class="zoom">
-        <img src="resources/g0m3z/g0m3z-skull.png" class="img-fluid mb-3" alt="g0m3z skull">
-    </div>
-        <h2><a href='https://www.instagram.com/elg0m3z/' target="_blank">Instagram</a></h2>
+          <!-- width/height added to prevent layout shift (CLS) -->
+          <img src="resources/g0m3z/g0m3z-skull.png" class="img-fluid mb-3" width="400" height="400" alt="g0m3z skull">
+        </div>
+        <h2><a href="https://www.instagram.com/elg0m3z/" target="_blank" rel="noopener noreferrer">Instagram</a></h2>
         <p>Come inside, have a cup of tea! There is usually something new.</p>
         <p>I try to get this space up for you, but no time.</p>
-        <a href='https://www.instagram.com/elg0m3z/' >
+        <!-- target="_blank" moved to the <a>, not the <img> -->
+        <a href="https://www.instagram.com/elg0m3z/" target="_blank" rel="noopener noreferrer">
           <div class="zoom">
-            <img src="resources/g0m3z/lilbro.PNG" width="250" height="250" alt="g0m3z lil bro" target="_blank">
+            <img src="resources/g0m3z/lilbro.PNG" width="250" height="250" alt="g0m3z lil bro" loading="lazy">
           </div>
         </a>
       </div>
 
       <div class="col-md-6">
-        <h3>About</h3>
+        <h2>About</h2>
         <p>
-          Hi, my name is Thomas Gómez. This is my website. <br>
-          Have a little look around, I hope you find something you like. <br>
-          I am an artist, musician, and philosopher. <br>
+          Hi, my name is Thomas Gómez. This is my website.<br>
+          Have a little look around, I hope you find something you like.<br>
+          I am an artist, musician, and philosopher.
         </p>
         <ul>
           <li>Meet everyone with a blank slate in mind.</li>
@@ -98,62 +64,60 @@
           <li>Look to the future with optimism.</li>
         </ul>
         <p>el g0m3z</p>
-        <a href='https://www.instagram.com/elg0m3z/' >
-          <div class="zoom">
-        <img src="resources/g0m3z/thomas-jesus2.png" class="img-fluid mb-3"alt="Thomas as Jesus"></a>
-        </div>
+        <a href="https://www.instagram.com/elg0m3z/" target="_blank" rel="noopener noreferrer">
+          <img src="resources/g0m3z/thomas-jesus2.png" class="img-fluid mb-3" width="500" height="600" alt="Thomas as Jesus" loading="lazy">
+        </a>
       </div>
     </div>
 
-    <hr style="width: 100%; border-top: 3px solid #00ab44; margin: 4rem 0;">
+    <hr style="border-top: 3px solid #00ab44; margin: 4rem 0;">
 
-    <!-- Section: Painting & Life Stuff -->
+    <!-- Paintings & Life stuff -->
     <div class="row text-center mb-4">
       <div class="col-md-6">
-        <h1><a href='paintings/painting.html'>Paintings</a></h1>
+        <h2><a href="paintings/painting.html">Paintings</a></h2>
       </div>
       <div class="col-md-6">
         <h3>Life stuff</h3>
-        At the top you have to look down, at the bottom you have to look up.
+        <p>At the top you have to look down, at the bottom you have to look up.</p>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-6 text-center">
         <div class="zoom">
-          <a href='paintings/painting.html'><img src="resources/g0m3z/g0m3z-1.png" class="img-fluid" alt="Artwork"></a>
+          <a href="paintings/painting.html">
+            <img src="resources/g0m3z/g0m3z-1.png" class="img-fluid" alt="Artwork" loading="lazy">
+          </a>
         </div>
       </div>
       <div class="col-md-6">
-        <h1><a href='philosophy/philosophy.html'>Philosophy</a></h1>
+        <h2><a href="philosophy/philosophy.html">Philosophy</a></h2>
         <p>Here are some philosophical ideas I find interesting and my thoughts on them.</p>
 
-        <h1><a href='books.html'>Books</a></h1>
+        <h2><a href="books.html">Books</a></h2>
         <p>Check out my favorite books!</p>
 
-        <h1><a href='revolucion.html'>Revolucion</a></h1>
+        <h2><a href="revolucion.html">Revolucion</a></h2>
         <p>Join the revolution. Explore ways to fight oppression and create a better world.</p>
       </div>
     </div>
 
-    <!-- Music Section -->
+    <!-- Music section -->
     <div class="row mt-5">
       <div class="col-md-6">
-        <h1><a href='music.html'>Music</a></h1>
+        <h2><a href="music.html">Music</a></h2>
         <p>Cumbia</p>
         <div class="zoom">
-          <img src="resources/g0m3z/thomas-guitar.jpg" class="img-fluid" alt="Cumbia Album">
+          <img src="resources/g0m3z/thomas-guitar.jpg" class="img-fluid" alt="Thomas playing guitar" width="600" height="450" loading="lazy">
         </div>
       </div>
     </div>
 
   </main>
 
-  <!-- Bootstrap Scripts -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+  <!-- Bootstrap 5 (no jQuery required) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="nav.js"></script>
 </body>
-
 </html>
